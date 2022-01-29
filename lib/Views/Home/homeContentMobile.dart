@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_web/Widgets/Call%20to%20Action/call_to_action.dart';
+import 'package:flutter_web/Widgets/Call%20to%20Action/call_to_action_mobile.dart';
+import 'package:flutter_web/Widgets/Call%20to%20Action/call_to_action_tablet_desktop.dart';
 import 'package:flutter_web/Widgets/Course%20Detail/course_details.dart';
 
 class HomeContentMobile extends StatelessWidget {
@@ -16,7 +18,7 @@ class HomeContentMobile extends StatelessWidget {
         children: [
           CourseDetails(),
           SizedBox(
-            height: 100,
+            height: 50,
           ),
           CallToAction('Join Course')
         ],
