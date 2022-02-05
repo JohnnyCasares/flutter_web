@@ -16,31 +16,9 @@ class HomeView extends StatelessWidget {
   Widget build(BuildContext context) {
     //Wrapped the Scaffold with ResponsiveBuilder in order for the drawer to be accessible
     //only when the screen type is mobile
-    return ResponsiveBuilder(
-      builder: (context, sizingInformation) => Scaffold(
-        endDrawer: sizingInformation.deviceScreenType == DeviceScreenType.mobile
-            ? NavigationDrawer()
-            : null,
-        backgroundColor: Colors.white,
-        body: CenteredView(
-          //I tried adding scroll view but it doesnt work
-          //Scroll views must be added to the specific Home Content of the layout
-          //meaning inside HomeContentDesktop or Mobile
-          child: Column(
-            children: [
-              OriginalNavigationBar(),
-              SizedBox(
-                height: 20,
-              ),
-              Expanded(
-                  child: ScreenTypeLayout(
-                desktop: HomeContentDesktop(),
-                mobile: HomeContentMobile(),
-              ))
-            ],
-          ),
-        ),
-      ),
+    return ScreenTypeLayout(
+      desktop: HomeContentDesktop(),
+      mobile: HomeContentMobile(),
     );
   }
 }
