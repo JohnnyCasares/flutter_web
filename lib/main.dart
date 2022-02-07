@@ -4,6 +4,7 @@ import 'package:flutter_web/Views/Layout_Template/layout_template.dart';
 import 'package:flutter_web/locator.dart';
 
 void main() {
+  //Locator works for the gei it import
   setUpLocator();
   runApp(const MyApp());
 }

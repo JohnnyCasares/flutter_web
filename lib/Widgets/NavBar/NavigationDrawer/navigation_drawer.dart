@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_web/Routing/route_names.dart';
 import 'package:flutter_web/Widgets/NavBar/NavigationDrawer/drawer_item.dart';
 import 'package:flutter_web/Widgets/NavBar/NavigationDrawer/navigation_drawer_header.dart';
 
 //This class is the over all drawer
-//Here we place the other pieces like the header and the item
+//Here we place the other pieces like the header and the drawer item
 
 class NavigationDrawer extends StatelessWidget {
   const NavigationDrawer({Key? key}) : super(key: key);
@@ -22,10 +23,11 @@ class NavigationDrawer extends StatelessWidget {
         children: [
           NavigationDrawerHeader(),
           DrawerItem(
-            title: 'Episodes',
-            icon: Icons.videocam,
-          ),
-          DrawerItem(icon: Icons.help, title: 'About')
+              title: 'Episodes',
+              icon: Icons.videocam,
+              navigationPath: EpisodesRoute),
+          DrawerItem(
+              icon: Icons.help, title: 'About', navigationPath: AboutRoute)
         ],
       ),
     );
