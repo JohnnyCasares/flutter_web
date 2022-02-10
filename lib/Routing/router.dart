@@ -1,5 +1,3 @@
-import 'dart:js';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_web/Routing/route_names.dart';
 import 'package:flutter_web/Views/About/about_view.dart';
